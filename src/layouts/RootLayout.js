@@ -8,11 +8,12 @@ function RootLayout() {
           <h1>JobRouter</h1>
           <NavLink to="/">Home </NavLink>
           <NavLink to="about">About</NavLink>
+          <NavLink to="help">Help</NavLink>
         </nav>
       </header>
       <main>
         <Outlet />
-        
+
         {/* the home page and about us page content will not show without outlet.
         
         
