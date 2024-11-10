@@ -19,6 +19,7 @@ import HelpLayout from "./layouts/HelpLayout";
 import ErrorPage from "./pages/ErrorPage";
 import CareerLayout from "./layouts/CareerLayout";
 import Careers, { careerLoader } from "./pages/Careers";
+import CareerDetails, { careerdetailsLoader } from "./pages/CareerDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,6 +32,11 @@ const router = createBrowserRouter(
       </Route>
       <Route path="careers" element={<CareerLayout />}>
         <Route index element={<Careers />} loader={careerLoader} />
+        <Route
+          path=":id"
+          element={<CareerDetails />}
+          loader={careerdetailsLoader}
+        />
       </Route>
 
       <Route path="*" element={<ErrorPage />} />
